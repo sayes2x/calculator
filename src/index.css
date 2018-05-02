@@ -1,0 +1,234 @@
+:root {
+  --mult: 1;
+}
+
+body {
+  margin: 25px;
+  background-image: url('./picts/wood-texture.jpg');
+}
+
+.calculatorApp {
+  width: calc(250px * var(--mult));
+  height: 416px;
+  display: grid;
+  grid-template-rows: 3% 1fr 3%;
+  grid-template-columns: 3% 1fr 3%;
+  margin: auto;
+  border-radius: calc(10px * var(--mult));
+  box-shadow: calc(10px * var(--mult)) calc(10px * var(--mult))
+    calc(15px * var(--mult)) #8b642d;
+}
+
+.topLeft {
+  background: radial-gradient(
+    farthest-corner at bottom right,
+    #272c32,
+    #4f5864 50%
+  );
+  border-top-left-radius: calc(10px * var(--mult));
+}
+
+.top {
+  background: linear-gradient(#4f5864, #272c32);
+}
+
+.topRight {
+  background: linear-gradient(to bottom right, #4f5864, black);
+  border-top-right-radius: calc(10px * var(--mult));
+}
+
+.left {
+  background: linear-gradient(to right, #4f5864, #272c32);
+}
+
+.right {
+  background: linear-gradient(to right, #272c32, black);
+}
+
+.bottomLeft {
+  background: linear-gradient(to bottom right, #4f5864, black);
+  border-bottom-left-radius: calc(10px * var(--mult));
+}
+
+.bottom {
+  background: linear-gradient(#272c32, black);
+}
+
+.bottomRight {
+  background: radial-gradient(circle at top left, #272c32, black 50%);
+  border-bottom-right-radius: calc(10px * var(--mult));
+}
+
+.calculator {
+  background-color: #272c32;
+  padding: 13px 0;
+}
+
+.label {
+  color: white;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.screen {
+  background-color: #81a17c;
+  width: calc(200px * var(--mult));
+  height: calc(45px * var(--mult));
+  margin: auto;
+  font-family: 'Aldrich', sans-serif;
+  border-radius: calc(5px * var(--mult));
+  border-width: calc(3px * var(--mult));
+  border-style: solid;
+  border-left-color: #0b0d0e;
+  border-top-color: #0b0d0e;
+  border-right-color: #4f5864;
+  border-bottom-color: #4f5864;
+}
+
+.result {
+  font-weight: bold;
+  text-align: right;
+  font-size: calc(27px * var(--mult));
+  margin: 0;
+  padding: calc(5px * var(--mult)) calc(5px * var(--mult)) 0;
+}
+
+.que {
+  color: #404040;
+  text-align: right;
+  font-size: calc(12px * var(--mult));
+  margin: 0;
+  padding: 0 5px;
+}
+
+.keypad {
+  width: calc(200px * var(--mult));
+  height: 260px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: calc(10px * var(--mult));
+  margin: auto;
+  padding-top: 15px;
+}
+
+.key {
+  color: white;
+  background: radial-gradient(#474747, #595959);
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  border-radius: calc(5px * var(--mult));
+  border-width: calc(1px * var(--mult));
+  border-style: solid;
+  border-left-color: #737373;
+  border-top-color: #737373;
+  border-right-color: #1a1a1a;
+  border-bottom-color: #1a1a1a;
+}
+
+.key:focus {
+  outline: 0;
+}
+
+.key:active {
+  border-left-color: #1a1a1a;
+  border-top-color: #1a1a1a;
+  border-right-color: #737373;
+  border-bottom-color: #737373;
+}
+
+span {
+  position: relative;
+}
+
+.key:active span {
+  top: calc(1px * var(--mult));
+  left: calc(1px * var(--mult));
+}
+
+.twoRows {
+  grid-row: 4 / span 2;
+  grid-column-start: 4;
+}
+
+.clear {
+  color: white;
+  background: radial-gradient(#bf6c80, #c98393);
+  border-left-color: #d8a6b2;
+  border-top-color: #d8a6b2;
+  border-right-color: #8e3e51;
+  border-bottom-color: #8e3e51;
+}
+
+.clear:active {
+  border-left-color: #8e3e51;
+  border-top-color: #8e3e51;
+  border-right-color: #d8a6b2;
+  border-bottom-color: #d8a6b2;
+}
+
+.number {
+  color: white;
+  background-color: #88888a;
+  background: radial-gradient(#88888a, #98989a);
+  border-left-color: #b2b2b3;
+  border-top-color: #b2b2b3;
+  border-right-color: #58585a;
+  border-bottom-color: #58585a;
+}
+
+.number:active {
+  border-left-color: #58585a;
+  border-top-color: #58585a;
+  border-right-color: #b2b2b3;
+  border-bottom-color: #b2b2b3;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #8e3e51;
+}
+
+@media screen and (min-width: 600px) {
+  :root {
+    --mult: 2;
+  }
+  body {
+    margin: 35px;
+  }
+  .calculatorApp {
+    height: 771px;
+  }
+  .calculator {
+    padding: 17px 0;
+  }
+  .label {
+    font-size: 30px;
+    padding-bottom: 0;
+  }
+  .screen {
+    margin: 15px auto 35px;
+  }
+  .que {
+    padding: 0 10px 10px;
+  }
+  .keypad {
+    height: 495px;
+    padding-top: 0;
+  }
+  .key {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
