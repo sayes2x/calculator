@@ -85,7 +85,7 @@ class Calculator extends Component {
     if (pressed.indexOf(event.key) !== -1) {
       key = sent[pressed.indexOf(event.key)];
     }
-    if (/[0-9\.%]/.test(event.key)) {
+    if (/[0-9.%]/.test(event.key)) {
       key = event.key;
     }
     if (key !== '') this.handleClick(key);
@@ -120,7 +120,11 @@ class Calculator extends Component {
         </div>
         <h3>
           Designed & Coded by{' '}
-          <a href="https://www.scottaprice.com/" target="_blank">
+          <a
+            href="https://www.scottaprice.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Scott A. Price
           </a>
         </h3>

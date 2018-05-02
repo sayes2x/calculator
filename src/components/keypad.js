@@ -1,15 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Key from './key';
 
-const Keypad = props => {
+const Keypad = ({ keys, onClick }) => {
   const handleClick = key => {
-    props.onClick(key);
+    onClick(key);
   };
 
-  const keys = props.keys.map(key => {
-    return <Key onClick={handleClick} name={key} />;
+  const keypad = keys.map(key => {
+    return <Key onClick={handleClick} name={key} key={key} />;
   });
-  return <div className="keypad">{keys}</div>;
+  return <div className="keypad">{keypad}</div>;
 };
 
 export default Keypad;
+
+Keypad.prototype = {
+  key: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
+};

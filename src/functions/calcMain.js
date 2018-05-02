@@ -12,7 +12,7 @@ const calcMain = (key, ...que) => {
   // handle next key press after equal
   if (/=/.test(que[que.length - 2])) {
     // if operation continue calculating
-    if (/[\+\-x÷]/.test(key)) {
+    if (/[+\-x÷]/.test(key)) {
       que = [que[que.length - 1]];
       // if anything else, start over
     } else {
@@ -22,7 +22,7 @@ const calcMain = (key, ...que) => {
   // Determine calc.que
   const number = /\d/.test(key);
   if (number) calc.que = keyNumber(key, ...que);
-  const operation = /[\+\-x÷]/.test(key);
+  const operation = /[+\-x÷]/.test(key);
   if (operation) calc.que = keyOperation(key, ...que);
   const equal = /=/.test(key);
   if (equal) calc.que = keyEqual(key, ...que);

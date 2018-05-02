@@ -2,9 +2,9 @@ const keyNumber = (key, ...que) => {
   // Que conditions
   const emptyQue = que.length === 0;
   const lastElement = que.length - 1;
-  const lastElementNumber = /[\d\.]/.test(que[lastElement]);
+  const lastElementNumber = /[\d.]/.test(que[lastElement]);
   const lastElementOnlyZero = /^0$/.test(que[lastElement]);
-  const lastElementOperation = /[\+\-x÷]/.test(que[lastElement]);
+  const lastElementOperation = /[+\-x÷]/.test(que[lastElement]);
   let queLengthLessTen;
   emptyQue
     ? (queLengthLessTen = true)

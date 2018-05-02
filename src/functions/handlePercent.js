@@ -12,12 +12,12 @@ const percentNumber = (number, operator) => {
   number = number / 100;
   if (/\+/.test(operator)) {
     number += 1;
-  } else if (/\-/.test(operator)) {
+  } else if (/-/.test(operator)) {
     number = 1 - number;
   }
   return number;
 };
 
-const percentOperator = operator => (/[\+\-]/.test(operator) ? 'x' : operator);
+const percentOperator = operator => (/[+-]/.test(operator) ? 'x' : operator);
 
 export default handlePercent;

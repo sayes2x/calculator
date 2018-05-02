@@ -1,10 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Key = props => {
-  const { name } = props;
-
+const Key = ({ name, onClick }) => {
   const handleClick = () => {
-    props.onClick(name);
+    onClick(name);
   };
 
   let className = 'key';
@@ -23,3 +22,8 @@ const Key = props => {
 };
 
 export default Key;
+
+Key.prototype = {
+  name: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
+};

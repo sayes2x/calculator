@@ -4,10 +4,10 @@ const keyEqual = (key, ...que) => {
   //Que Conditions
   const elementCount3Plus = que.length >= 3;
   const lastElement = que.length - 1;
-  const lastElementNumber = /[\d\.]/.test(que[lastElement]);
+  const lastElementNumber = /[\d.]/.test(que[lastElement]);
   const lastElementEndDot = /\.$/.test(que[lastElement]);
   const lastElementPercent = /%/.test(que[lastElement]);
-  const lastElementOperation = /[\+\-x÷]/.test(que[lastElement]);
+  const lastElementOperation = /[+\-x÷]/.test(que[lastElement]);
 
   if (elementCount3Plus) {
     if (lastElementEndDot) {
