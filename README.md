@@ -10,7 +10,7 @@ one of the Advanced Front End Development project requirement for freeCodeCamp.
 * Written using React.js
 * Originally build using [Codepen](https://codepen.io/sayes2x/pen/XqJOye)
 * Ported to [create react app](https://github.com/facebook/create-react-app) 
-to move to its own page on [netlify](https://github.com/facebook/create-react-app)
+to move to its own page on [netlify](https://sayes2x-react-calculator.netlify.com/)
 * Button Functions:
   * AC: clears the calculator
   * C: clears the last entered number or function
