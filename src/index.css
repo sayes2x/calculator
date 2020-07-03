@@ -86,22 +86,23 @@ body {
   border-top-color: #0b0d0e;
   border-right-color: #4f5864;
   border-bottom-color: #4f5864;
+  padding: 0 calc(3px * var(--mult)) 0;
 }
 
 .result {
   font-weight: bold;
   text-align: right;
   font-size: calc(27px * var(--mult));
+  height: calc(27px * var(--mult));
   margin: 0;
-  padding: calc(5px * var(--mult)) calc(5px * var(--mult)) 0;
 }
 
 .que {
   color: #404040;
   text-align: right;
   font-size: calc(12px * var(--mult));
+  height: calc(12px * var(--mult));
   margin: 0;
-  padding: 0 5px;
 }
 
 .keypad {
@@ -217,9 +218,6 @@ a {
   }
   .screen {
     margin: 15px auto 35px;
-  }
-  .que {
-    padding: 0 10px 10px;
   }
   .keypad {
     height: 495px;
