@@ -89,7 +89,7 @@ body {
   /* padding: 0 calc(3px * var(--mult)) 0; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: space-evenly; */
   align-items: flex-end;
 }
 
