@@ -76,7 +76,7 @@ body {
 .screen {
   background-color: #81a17c;
   width: calc(200px * var(--mult));
-  /* height: calc(45px * var(--mult)); */
+  height: calc(45px * var(--mult));
   margin: auto;
   font-family: 'Aldrich', sans-serif;
   border-radius: calc(5px * var(--mult));
@@ -97,7 +97,7 @@ body {
   font-weight: bold;
   /* text-align: right; */
   font-size: calc(27px * var(--mult));
-  /* height: calc(27px * var(--mult)); */
+  height: calc(27px * var(--mult));
   margin: 0;
   padding-right: calc(3px * var(--mult));
 }
@@ -106,7 +106,7 @@ body {
   color: #404040;
   /* text-align: right; */
   font-size: calc(12px * var(--mult));
-  /* height: calc(12px * var(--mult)); */
+  height: calc(12px * var(--mult));
   margin: 0;
   padding-right: calc(3px * var(--mult));
 }
